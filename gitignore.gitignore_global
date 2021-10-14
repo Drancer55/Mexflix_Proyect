@@ -1,0 +1,4 @@
+# ignorar estos archivos
+
+/node_modules
+/package-json

@@ -1,0 +1,23 @@
+{
+  "name": "mexflix",
+  "version": "1.0.0",
+  "description": "Es una pequeña app de peliculas chidoris ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drancer55/Mexflix_Proyect.git"
+  },
+  "keywords": [
+    "isc",
+    "MIT"
+  ],
+  "author": "Oscar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drancer55/Mexflix_Proyect/issues"
+  },
+  "homepage": "https://github.com/Drancer55/Mexflix_Proyect#readme"
+}
