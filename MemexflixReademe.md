@@ -18,13 +18,13 @@ El arte de tus películas favoritas está al alcance de tu mano, en el momento q
 
 Con el objetivo de garantizar una gran experiencia de entretenimiento, se ha diseñado el siguiente diagrama de flujo que denota, esencialmente, la factibilidad de uso de la aplicación Wi-flix. Procurando incluir detalles que coadyuven a mejorar la experienca y el acceso al catálogo de peliculas, así como la busqueda de otros titulos que pudieran ser de interés. 
 
-![Diagrama de flujo Wiflix] (/c/Proyectos/Mexflix/Assets/Diagrama_de_flujo_Wiflix.jpeg)
+![Diagrama de flujo Wiflix] (/Assets/Diagrama_de_flujo_Wiflix.jpeg)
 ### Maquetado
 
 Esta es, en esencia de la Interface del usuario.
 
-![ Pantalla1 ] (/Mexflix/Assets/Pantalla1.png)
+![ Pantalla1 ] (/Assets/Pantalla1.png)
 
-![ Pantalla2 ] (/Mexflix/Assets/Pantalla2.png)
+![ Pantalla2 ] (/Assets/Pantalla2.png)
 
-![ Pantalla3 ] (/Mexflix/Assets/Pantalla3.png)
+![ Pantalla3 ] (/Assets/Pantalla3.png)
