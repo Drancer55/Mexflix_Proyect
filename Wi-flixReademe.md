@@ -21,7 +21,7 @@ Con el objetivo de garantizar una gran experiencia de entretenimiento, se ha dis
 ![Diagrama de flujo Wiflix] (/Assets/Diagrama_de_flujo_Wiflix.jpeg)
 ### Maquetado
 
-Esta es, en esencia de la Interface del usuario.
+Esta es, en esencia la Interface del usuario.
 
 ![ Pantalla1 ] (/Assets/Pantalla1.png)
 
