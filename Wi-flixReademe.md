@@ -12,12 +12,13 @@ Esta es una aplicación con un catálogo de peliculas animadas para gente de tod
 ¡Estás en el sitio correcto! 
 
 
-El arte de tus películas favoritas está al alcance de tu mano, en el momento que tú quieras y en el dispositivo que más prefieras, ahora de lo único que tendrás que preocuparte es por cuál botana disfrutarás mientras disfrutas del contenido que hemos diseñado para ti. 
+El arte de tus películas favoritas está al alcance de tu mano, en el momento que tú quieras y en el dispositivo que más prefieras, ahora de lo único que tendrás que preocuparte es por cuál botana elegirás mientras disfrutas  del contenido que hemos diseñado para ti. 
 
 ### Diagrama de flujo:
 
 Con el objetivo de garantizar una gran experiencia de entretenimiento, se ha diseñado el siguiente diagrama de flujo que denota, esencialmente, la factibilidad de uso de la aplicación Wi-flix. Procurando incluir detalles que coadyuven a mejorar la experienca y el acceso al catálogo de peliculas, así como la busqueda de otros titulos que pudieran ser de interés. 
 
+<<<<<<< HEAD:MemexflixReademe.md
 ![Diagrama de flujo Wiflix] (/Assets/Diagrama_de_flujo_Wiflix.jpeg)
 ### Maquetado
 
@@ -28,3 +29,15 @@ Esta es, en esencia de la Interface del usuario.
 ![ Pantalla2 ] (/Assets/Pantalla2.png)
 
 ![ Pantalla3 ] (/Assets/Pantalla3.png)
+=======
+![Diagrama de flujo Wiflix] (./assets/Diagrama_de_flujo_Wiflix.jpeg)
+### Maquetado
+
+Esta es, en esencia la Interface del usuario.
+
+![ Pantalla1 ] (./assets/Pantalla1.png)
+
+![ Pantalla2 ] (./assets/Pantalla2.png)
+
+![ Pantalla3 ] (./assets/Pantalla3.png)
+>>>>>>> cf50a88752b19a358a0933ef914078ebb2ce3158:Wi-flixReademe.md

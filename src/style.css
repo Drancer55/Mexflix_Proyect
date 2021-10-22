@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=PT+Serif:ital@1&display=swap');
+
+/* Pantalla de Log-in */  
+#logo{
+    color: rgb(228, 231, 36);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bolder;
+    font-size: 3.5rem;
+    padding-top: 9.8rem;
+}
+
+#pantalla1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    height: 1rem;
+    background-color: black;
+}  
+
+#indication{
+    font-family: 'PT Serif', serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 1rem;
+}
+
+input{
+    border-radius: 15px;
+    padding: 0.8rem;
+    height: 3rem;
+}
+
+button{
+    border-radius: 20px;
+    margin: 10px;
+    height: 2.5rem;
+}
+ /* Pantalla de catálogo
+    Barra de navegación */
+#pantalla2{
+    background-color: black;
+    color: blanchedalmond;
+}
+#logo1{
+    color: rgb(228, 231, 36);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+}
+}
+/*Pantalla 3: Busqueda*/
+#pantalla3{
+  white-space: nowrap;
+  overflow: auto;
+  position: relative;
+  padding: auto;
+}
+
+
+/*Seccion de películas */
+/* sección principal */
+
+
+.poster{
+  white-space: nowrap;
+  overflow: auto;
+  position: relative;
+  padding: auto;
+}
+
+.poster h3{
+  text-align: left;
+}
+
+.poster :hover{
+  margin: 0 40px;
+  transform: scale(0.9);
+  transition: 0.7s;
+}
+
+
+/*Foooter (contacto)*/
+footer{
+    background-color: rgba(11, 11, 36, 0.836);
+    justify-content: space-evenly;
+    border-top: 3px solid rgba(28, 17, 34, 0.705);
+    font-size: 1.15rem;
+    font-weight: 1.125rem;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+footer i{
+    color: rgb(17, 63, 136);
+    vertical-align: middle;
+}
+
+footer i:hover{
+    transform: translateY(9px);
+    transition: transform 0.5s ease-out;
+}
+
+#navigator-footer li{
+    display: inline-block;
+    height: auto;
+}
