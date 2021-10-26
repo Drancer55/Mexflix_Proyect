@@ -38,8 +38,13 @@ button{
     Barra de navegación */
 #pantalla2{
     background-color: black;
+    color: rgb(17, 17, 17);
+}
+
+.container {
     color: blanchedalmond;
 }
+
 #logo1{
     color: rgb(228, 231, 36);
     font-family: 'Gloria Hallelujah', cursive;
@@ -78,6 +83,7 @@ button{
   overflow: auto;
   position: relative;
   padding: auto;
+  color: aliceblue;
 }
 
 .poster h3{
@@ -100,6 +106,7 @@ footer{
     font-weight: 1.125rem;
     text-align: center;
     margin-bottom: -30px;
+    color: aliceblue;
 }
 
 footer i{
@@ -115,4 +122,9 @@ footer i:hover{
 #navigator-footer li{
     display: inline-block;
     height: auto;
+}
+
+section #results{
+    background-color: black;
+    color: blanchedalmond;
 }
