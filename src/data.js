@@ -25,7 +25,7 @@ export let getOMBDAPI = filmForSearch => {
 //Seccion del recomendado principal
     let movieSelectionMain = ["tt2380307", "tt0103359", "tt0081852"] //Id= de la pelicula principal que se muestra al principio del catálogo
 //Bring movie main recomended selection
-    for (const imdbID of movieSelectionMain) {
+    for (let imdbID of movieSelectionMain) {
         console.log(imdbID)
         fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
         .then((response) => response.json())
@@ -34,17 +34,44 @@ export let getOMBDAPI = filmForSearch => {
     }
 //Rendering section movie main recomended
     let reanderingSelectedMovie = (data) => { //Variable declarada para la primer sección
-        console.log(data)
         let movieSelectionSectionMainImg = document.getElementById("recomendadosImg") //se prepara el espacio en el HTML mediante el <div> con el ID correspondiente
-        movieSelectionSectionMainImg.innerHTML += '<img src=' + `${data.Poster}` + ' /> '//template string JS
+        movieSelectionSectionMainImg.innerHTML += `<a href="" data-bs-toggle="modal" data-bs-target=#`+`${data.imdbID}`+`> <img src=` + `${data.Poster}` + ' /> </a>'//template string JS
         let movieSelectionSectionMain = document.getElementById("recomendados") //se prepara el espacio en el HTML mediante el <div> con el ID correspondiente
-        movieSelectionSectionMain.innerHTML += "<h1>Titulo: " + `${data.Title}`+ "</h1>" + "<h1>Año: " + `${data.Year}`+ "</h1>" + "<h3>Duración: " + `${data.Runtime}`+ "</h3>" + "<h3>Género: " + `${data.Genre}` + "</h3>" + "<h3>Actores: " + `${data.Actors}`+ "</h3>" + "<h3>Director: " + `${data.Director}` + "</h3>" +"<br>" +"<p>Resumen: " + `${data.Plot}`+ "</p>"//template string JS
+        movieSelectionSectionMain.innerHTML += `<div 
+        class="modal fade" 
+        id=`+`${data.imdbID}`+` 
+        data-bs-backdrop="static" 
+        data-bs-keyboard="false" 
+        tabindex="-1" aria-labelledby="staticBackdropLabel" 
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">` + `${data.Title}` +
+            `</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <h3>Year: </h3> <p>${data.Year}</p> 
+            <h3>Duración: </h3> <p>${data.Runtime}</p>
+            <h3>Género: </h3> <p>${data.Genre} </p>
+            <h3>Actores: </h3> <p>${data.Actors}</p>
+            <h3>Director: </h3> <p>${data.Director} </p>
+            <h3>Plot: </h3> <p>${data.Plot}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>`
           //Se imprimen los datos seleccionados en HTML
 }
 //Sección de Populares
     let movieSelectionPopular = ["tt0096697", "tt1305826", "tt6595896", "tt2861424", "tt1710308", "tt1865718", "tt4116284", "tt0126029", "tt0386180", "tt0114709"] //Array con los ID de las peliculas seleccionadas
 //Bring movie selection 
-    for (const imdbID of movieSelectionPopular) {
+    for (let imdbID of movieSelectionPopular) {
         console.log(imdbID)
         fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
         .then((response) => response.json())
@@ -56,13 +83,41 @@ let reanderingSelectedMovie1 = (data) => {
     console.log(data)
     let movieSelectionSectionPopImg = document.getElementById("popularesImg")
     let movieSelectionSectionPop = document.getElementById("populares")
-    movieSelectionSectionPopImg.innerHTML += '<img src=' + `${data.Poster}` + ' /> '
-    movieSelectionSectionPop += "<br>" + "<h1>Titulo: " + `${data.Title}`+ "</h1>" + "<h1>Año: " + `${data.Year}`+ "</h1>" + "<h3>Duración: " + `${data.Runtime}`+ "</h3>" + "<h3>Género: " + `${data.Genre}` + "</h3>" + "<h3>Actores: " + `${data.Actors}`+ "</h3>" + "<h3>Director: " + `${data.Director}` + "</h3>" +"<br>" +"<p>Resumen: " + `${data.Plot}`+ "</p>"//template string JS
+    movieSelectionSectionPopImg.innerHTML += `<a href="" data-bs-toggle="modal" data-bs-target=#`+`${data.imdbID}`+`> <img src=` + `${data.Poster}` + ' /> </a>'//template string JS
+    movieSelectionSectionPop.innerHTML += `<div 
+    class="modal fade" 
+    id=`+`${data.imdbID}`+` 
+    data-bs-backdrop="static" 
+    data-bs-keyboard="false" 
+    tabindex="-1" aria-labelledby="staticBackdropLabel" 
+    aria-hidden="true"
+    >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">` + `${data.Title}` +
+        `</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h3>Year: </h3> <p>${data.Year}</p> 
+        <h3>Duración: </h3> <p>${data.Runtime}</p>
+        <h3>Género: </h3> <p>${data.Genre} </p>
+        <h3>Actores: </h3> <p>${data.Actors}</p>
+        <h3>Director: </h3> <p>${data.Director} </p>
+        <h3>Plot: </h3> <p>${data.Plot}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>`
 }       //Se imprimen los datos seleccionados en HTML
 //Sección de Clásicos Animados 
 let movieSelectionClassic = ["tt0105941", "tt0115200", "tt0166910", "tt0255768", "tt0112453", "tt0053502", "tt0145628", "tt0101178", "tt0214341", "tt0175058"] //Array con los ID de las peliculas seleccionadas
 //Bring movie selection 
-for (const imdbID of movieSelectionClassic) {
+for (let imdbID of movieSelectionClassic) {
     console.log(imdbID)
     fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
     .then((response) => response.json())
@@ -74,14 +129,42 @@ let reanderingSelectedMovie2 = (data) => {
     console.log(data)
     let movieSelectionSectionClassImg = document.getElementById("clasicosAnimadosImg")
     let movieSelectionSectionClass = document.getElementById("clasicosAnimados")
-    movieSelectionSectionClassImg.innerHTML += '<img src=' + `${data.Poster}` + ' /> '
-    movieSelectionSectionClass.innerHTML += "<br>" + "<h1>Titulo: " + `${data.Title}`+ "</h1>" + "<h1>Año: " + `${data.Year}`+ "</h1>" + "<h3>Duración: " + `${data.Runtime}`+ "</h3>" + "<h3>Género: " + `${data.Genre}` + "</h3>" + "<h3>Actores: " + `${data.Actors}`+ "</h3>" + "<h3>Director: " + `${data.Director}` + "</h3>" +"<br>" +"<p>Resumen: " + `${data.Plot}`+ "</p>"//template string JS
+    movieSelectionSectionClassImg.innerHTML += `<a href="" data-bs-toggle="modal" data-bs-target=#`+`${data.imdbID}`+`> <img src=` + `${data.Poster}` + ' /> </a>'//template string JS
+    movieSelectionSectionClass.innerHTML += `<div 
+    class="modal fade" 
+    id=`+`${data.imdbID}`+` 
+    data-bs-backdrop="static" 
+    data-bs-keyboard="false" 
+    tabindex="-1" aria-labelledby="staticBackdropLabel" 
+    aria-hidden="true"
+    >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">` + `${data.Title}` +
+        `</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h3>Year: </h3> <p>${data.Year}</p> 
+        <h3>Duración: </h3> <p>${data.Runtime}</p>
+        <h3>Género: </h3> <p>${data.Genre} </p>
+        <h3>Actores: </h3> <p>${data.Actors}</p>
+        <h3>Director: </h3> <p>${data.Director} </p>
+        <h3>Plot: </h3> <p>${data.Plot}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>`
 }       //Se imprimen los datos seleccionados en HTML
 //Sección de educación
 let movieSelectionEducation = ["tt0052751", "tt0264734", "tt1620938", "tt0266543", "tt0487849", "tt0484469", "tt0235917", "tt1731145", "tt3121722", "tt0047834"] //Array con los ID de las peliculas seleccionadas
-    for (const imbdID of movieSelectionEducation) {
-        console.log(imbdID)
-        fetch("http://www.omdbapi.com/?i=" +imbdID+ "&apikey=d8504314")
+    for (let imdbID of movieSelectionEducation) {
+        console.log(imdbID)
+        fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
         .then((response) => response.json())
         .then((data) => reanderingSelectedMovie3(data))
         .catch((error) => console.log(error))
@@ -91,7 +174,35 @@ let reanderingSelectedMovie3 = (data) => {
     console.log(data)
     let movieSelectionSectionEduImg = document.getElementById("educacionImg")
     let movieSelectionSectionEdu = document.getElementById("educacion")
-    movieSelectionSectionEduImg.innerHTML += '<img src=' + `${data.Poster}` + ' /> '
-    movieSelectionSectionEdu.innerHTML += "<br>" + "<h1>Titulo: " + `${data.Title}`+ "</h1>" + "<h1>Año: " + `${data.Year}`+ "</h1>" + "<h3>Duración: " + `${data.Runtime}`+ "</h3>" + "<h3>Género: " + `${data.Genre}` + "</h3>" + "<h3>Actores: " + `${data.Actors}`+ "</h3>" + "<h3>Director: " + `${data.Director}` + "</h3>" +"<br>" +"<p>Resumen: " + `${data.Plot}`+ "</p>"//template string JS
+    movieSelectionSectionEduImg.innerHTML += `<a href="" data-bs-toggle="modal" data-bs-target=#`+`${data.imdbID}`+`> <img src=` + `${data.Poster}` + ' /> </a>'//template string JS
+    movieSelectionSectionEdu.innerHTML += `<div 
+    class="modal fade" 
+    id=`+`${data.imdbID}`+` 
+    data-bs-backdrop="static" 
+    data-bs-keyboard="false" 
+    tabindex="-1" aria-labelledby="staticBackdropLabel" 
+    aria-hidden="true"
+    >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">` + `${data.Title}` +
+        `</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <h3>Year: </h3> <p>${data.Year}</p> 
+        <h3>Duración: </h3> <p>${data.Runtime}</p>
+        <h3>Género: </h3> <p>${data.Genre} </p>
+        <h3>Actores: </h3> <p>${data.Actors}</p>
+        <h3>Director: </h3> <p>${data.Director} </p>
+        <h3>Plot: </h3> <p>${data.Plot}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>`
     }       //Una vez más se imprimen los datos seleccionados en HTML
 

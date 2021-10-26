@@ -26,8 +26,14 @@
     </section>
 <!----------Resultados de la busqueda --------------------------------------------------->
     <section id="pantalla3">
-      <button type="button" id="boton" class="btn-close" aria-label="Close"></button>
-      <div id="results"></div>
+      <div hidden id="searching-mov" class="container-1">
+      </div>
+        <button type="button" class="btn btn-primary mx-auto" id="back">
+          Atrás
+        </button>
+      </div>
+      <!--Div donde se renderean las peliculas buscadas-->
+      <div id="results"></div>     
     </section>
 <!----------Comienza el contenido de la App --------------------------------------------->
 <!----------Barra de navegación --------------------------------------------------------->
@@ -52,11 +58,11 @@
                   <a class="nav-link" href="#foot">Contacto</a>
                 </li>
               </ul>
-<!----------Busqueda de películas ------------------------------------------------------->
-            <form class="d-flex">
+<!----------Busqueda de películas en la barra de navegación------------------------------->
+            <section class="d-flex">
               <input class="form-control me-2" type="text" id="inputValue" placeholder="Buscar pelicula" aria-label="Search">
               <button class="btn btn-outline-success" id="search" type="button">Buscar</button>
-            </form>
+            </section>
               </div>
               </div>
       </nav>
@@ -65,38 +71,38 @@
     <main class="container">
       <div class=" p-5 rounded">
         <h1 id="bienvenida"></h1>
-          <p class="lead"> Gracias por visitar nuestro sitio, sientete libre de explorar el contenido que tenemos para ti.</p>
+          <p class="lead"> Gracias por visitar este espacio, sientete libre de explorar el contenido que tenemos preparado para ti.</p>
       </div>
     </main>
 <!----------Secciones ------------------------------------------------------------------->
-<center><section class="poster" id="recomendadosImg"></section></center>
-      <!--<section class="texto" id="recomendados"></section>--->
+    <center><section class="poster" id="recomendadosImg"></section></center>
+      <div class="texto" id="recomendados"></div>
 <!----------Sección de Populares -------------------------------------------------------->
     <section class="poster" id="popularesImg"><h3>Populares: </h3></section>
-      <!--<section class="texto" id="populares"></section>--->
+      <div class="texto" id="populares"></div>
 <!----------Sección de Clásicos Animados ------------------------------------------------>
     <section class="poster" id="clasicosAnimadosImg"><h3>Clásicos animados: </h3></section>
-      <!--<section class="texto" id="clasicosAnimados"></section>--->
+      <section class="texto" id="clasicosAnimados"></section>
 <!----------Sección de Educación -------------------------------------------------------->
     <section class="poster" id="educacionImg"><h3>Educación: </h3></section>
-      <!--<section class="texto" id="educacion"></section>--->
+      <section class="texto" id="educacion"></section>
 <!----------Creditos -------------------------------------------------------------------->
-        <footer id="foot">
+    <footer id="foot">
             &#169 CDMX MMXXI "Wi-flix proyect" Created by Oscar Ruiz
 <!----------Chismesito ------------------------------------------------------------------>
-            <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
+      <a href="http://twitter.com/DrancerLeCourt?s=09" target="_blank" class="btn"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/oscar-ruiz-antonio/" target="_blank" class="btn"><i class="fab fa-linkedin"></i></a>
 <!----------Barra de navegación del Footer ---------------------------------------------->
-                <br>
-            <nav id="navigator-footer">
-            <ul>
-                <li><a id="logo1" class="nav-link" href="#recomendadosImg">Wi-flix</a></li>
-                <li><a class="nav-link" href="#recomendadosImg">Recomendación </a></li>
-                <li><a class="nav-link" href="#popularesImg">Populares </a></li>
-                <li><a class="nav-link" href="#clasicosAnimadosImg">Clásicos animados </a></li>
-                <li><a class="nav-link" href="#educacionImg">Educación </a></li>
-            </ul>            
-            </nav>
+        <br>
+        <nav id="navigator-footer">
+        <ul>
+            <li><a id="logo1" class="nav-link" href="#recomendadosImg">Wi-flix</a></li>
+            <li><a class="nav-link" href="#recomendadosImg">Recomendación </a></li>
+            <li><a class="nav-link" href="#popularesImg">Populares </a></li>
+            <li><a class="nav-link" href="#clasicosAnimadosImg">Clásicos animados </a></li>
+            <li><a class="nav-link" href="#educacionImg">Educación </a></li>
+        </ul>            
+        </nav>
         </footer>
         </section>
 <!--JavaScript en tipo "module" que permite la epxortación de datos entre los documentos correspondientes-->
