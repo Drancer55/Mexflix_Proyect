@@ -9,7 +9,7 @@ for (let i = 0; i < filmData.Search.length; i++){ //Se hace una iteración "for"
 }}
 //Se envían los datos a través de 'export' haciendo conexión con 'index.js' por medio de la variable "getOMBDAPI"
 export let getOMBDAPI = filmForSearch => {
-    fetch ("http://www.omdbapi.com/?s=" + `${filmForSearch}` + "&apikey=d8504314")  //API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas.
+    fetch ("https://www.omdbapi.com/?s=" + `${filmForSearch}` + "&apikey=d8504314")  //API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas.
     .then((response) => {
         console.log(response)
         if (response.status == 404) { //si hay un error manda la alerta para tener cuidado con la redacción de los datos a buscar en el catalogo
@@ -27,7 +27,7 @@ export let getOMBDAPI = filmForSearch => {
 //Bring movie main recomended selection
     for (let imdbID of movieSelectionMain) {
         console.log(imdbID)
-        fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+        fetch("https://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
         .then((response) => response.json())
         .then((data) => reanderingSelectedMovie(data))
         .catch((error) => console.log(error))
@@ -73,7 +73,7 @@ export let getOMBDAPI = filmForSearch => {
 //Bring movie selection 
     for (let imdbID of movieSelectionPopular) {
         console.log(imdbID)
-        fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+        fetch("https://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314") //método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
         .then((response) => response.json())
         .then((data) => reanderingSelectedMovie1(data))
         .catch((error) => console.log(error))
@@ -119,7 +119,7 @@ let movieSelectionClassic = ["tt0105941", "tt0115200", "tt0166910", "tt0255768",
 //Bring movie selection 
 for (let imdbID of movieSelectionClassic) {
     console.log(imdbID)
-    fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
+    fetch("https://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
     .then((response) => response.json())
     .then((data) => reanderingSelectedMovie2(data))
     .catch((error) => console.log(error))
@@ -164,7 +164,7 @@ let reanderingSelectedMovie2 = (data) => {
 let movieSelectionEducation = ["tt0052751", "tt0264734", "tt1620938", "tt0266543", "tt0487849", "tt0484469", "tt0235917", "tt1731145", "tt3121722", "tt0047834"] //Array con los ID de las peliculas seleccionadas
     for (let imdbID of movieSelectionEducation) {
         console.log(imdbID)
-        fetch("http://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
+        fetch("https://www.omdbapi.com/?i=" +imdbID+ "&apikey=d8504314")
         .then((response) => response.json())
         .then((data) => reanderingSelectedMovie3(data))
         .catch((error) => console.log(error))
